@@ -1,2 +1,2 @@
-# Rock-Paper-Scissors
+# rock-paper-scissors
 first js project 
