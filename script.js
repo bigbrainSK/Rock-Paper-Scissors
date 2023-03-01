@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
               return "Draw!";
 
         default:
-            return 'you messed up buddy'
+            return 'you messed up buddy';
     }
 }
 
@@ -61,28 +61,30 @@ function game() {
 
   
 
-    if ("You lose, paper beats rock!" || "You lose, scissors beats paper! || You lose, rock beats scissors!") {
-      computerScore++;
+    if ((playRound(playerSelection, computerSelection)) =='You lose, paper beats rock!' || playRound(playerSelection, computerSelection) == 'You lose, scissors beats paper!' || playRound(playerSelection, computerSelection) == 'You lose, rock beats scissors!') {
+      computerScore++ ;
     }
-    else if ("You win, rock beats scissors!" || "You win, paper beats rock!" || "You win, scissors beats paper!") {
-      playerScore++;
+    else if ((playRound(playerSelection, computerSelection))=='You win, rock beats scissors!' || playRound(playerSelection, computerSelection)== 'You win, paper beats rock!' ||playRound(playerSelection, computerSelection)== 'You win, scissors beats paper!') {
+      playerScore++ ;
     }
-    else ("Draw!"); {
-      "neither of u mofos got a point"; 
+    else { 
+      alert("neither of u mofos got a point") ;
     }
-    
+  
     console.log(playRound(playerSelection, computerSelection));
  
     
   }
 }
-
+console.log(gameOver());
 function gameOver() { 
-when (i==5)
 
-if (computerScore >= 3) return 'You lost, the computer beat you!'
-
-else(playerScore >= 3); return 'You won, you beat the computer!'
+if (computerScore > playerScore) {
+  return 'You lost, the computer beat you!';
+}
+else {
+  return 'You won, you beat the computer!';
+ }
 }
 // create a function called game() 
 // call the playRound function inside this function
