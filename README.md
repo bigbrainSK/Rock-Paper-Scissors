@@ -1,2 +1,3 @@
 # rock-paper-scissors
-first js project 
+first js project :)  
+trying my best everyone

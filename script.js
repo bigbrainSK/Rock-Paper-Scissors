@@ -1,14 +1,49 @@
-let playerSelection = (prompt('Please enter rock, paper, or scissors'));
-
+//let playerSelection = (prompt('Please enter rock, paper, or scissors'));
+let playerSelection= '';
 let computerSelection= getComputerChoice();
 let computerScore=0;
 let playerScore=0;
 
 
 
+// get the container element to append the buttons to 
+const buttonContainer = document.querySelector("#buttons");
 
-playerSelection=playerSelection.toLowerCase();
-console.log(game());
+//create three buttons 
+const rock_button = document.createElement('button');
+const paper_button = document.createElement('button');
+const scissors_button = document.createElement('button');
+
+
+//set text content for each button
+button1.textContent = "rock";
+button2.textContent = "paper";
+button3.textContent = "scissors";
+
+function rock_click(e) {
+    playerSelection = 'rock';
+}
+
+function paper_click(e) {
+    playerSelection = 'paper';
+}
+
+function scissors_click(e) {
+  playerSelection = 'scissors';
+}
+
+// add event listener to each button
+button1.addEventListener('click', playRound('rock', computerSelection));  
+button2.addEventListener('click', playRound('paper', computerSelection));
+button3.addEventListener("click", playRound('scissors', computerSelection));
+
+// append buttons to the container element
+buttonContainer.appendChild(button1);
+buttonContainer.appendChild(button2);
+buttonContainer.appendChild(button3);
+
+//playerSelection=playerSelection.toLowerCase();
+//console.log(game());
 function getComputerChoice() {
     const randomNumber=Math.floor(Math.random()*3);
     switch (randomNumber) {
@@ -52,40 +87,42 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function game() {
-  for (let i=1;  i<=5; i++ ) {
-    computerSelection= getComputerChoice(); 
+// function game() {
+//   //for (let i=1;  i<=5; i++ )
+//    {
+//     computerSelection= getComputerChoice(); 
     
-    playerSelection = (prompt('Please enter rock, paper, or scissors'));
-    playerSelection=playerSelection.toLowerCase();
+//     playerSelection = buttons;
+    
 
+//     if ((playRound(playerSelection, computerSelection)) =='You lose, paper beats rock!' || playRound(playerSelection, computerSelection) == 'You lose, scissors beats paper!' || playRound(playerSelection, computerSelection) == 'You lose, rock beats scissors!') {
+//       computerScore++ ;
+//     }
+//     else if ((playRound(playerSelection, computerSelection))=='You win, rock beats scissors!' || playRound(playerSelection, computerSelection)== 'You win, paper beats rock!' ||playRound(playerSelection, computerSelection)== 'You win, scissors beats paper!') {
+//       playerScore++ ;
+//     }
+//     else { 
+//       alert("draw, neither of u got a point :)") ;
+//     }
   
-
-    if ((playRound(playerSelection, computerSelection)) =='You lose, paper beats rock!' || playRound(playerSelection, computerSelection) == 'You lose, scissors beats paper!' || playRound(playerSelection, computerSelection) == 'You lose, rock beats scissors!') {
-      computerScore++ ;
-    }
-    else if ((playRound(playerSelection, computerSelection))=='You win, rock beats scissors!' || playRound(playerSelection, computerSelection)== 'You win, paper beats rock!' ||playRound(playerSelection, computerSelection)== 'You win, scissors beats paper!') {
-      playerScore++ ;
-    }
-    else { 
-      alert("neither of u mofos got a point") ;
-    }
-  
-    console.log(playRound(playerSelection, computerSelection));
+//     console.log(playRound(playerSelection, computerSelection));
  
     
-  }
-}
-console.log(gameOver());
-function gameOver() { 
+//   }
+// }
+//console.log(gameOver());
+//function gameOver() { 
 
-if (computerScore > playerScore) {
-  return 'You lost, the computer beat you!';
-}
-else {
-  return 'You won, you beat the computer!';
- }
-}
+      //  if (computerScore > playerScore) {
+      //    return 'You lost, the computer beat you!';
+      //  }
+      //  else {
+       //   return 'You won, you beat the computer!';
+       // }
+       // }
+
+
+
 // create a function called game() 
 // call the playRound function inside this function
 // function will play 5 round game using a loop
