@@ -20,17 +20,10 @@ rock_button.textContent = "rock";
 paper_button.textContent = "paper";
 scissors_button.textContent = "scissors";
 
-function rock_click(e) {
-    playerSelection = 'rock';
-}
+// function rock_click(e) {
+//     playerSelection = 'rock';
+// }
 
-function paper_click(e) {
-    playerSelection = 'paper';
-}
-
-function scissors_click(e) {
-  playerSelection = 'scissors';
-}
 
 // add event listener to each button
 rock_button.addEventListener('click', playRound('rock', computerSelection));  
