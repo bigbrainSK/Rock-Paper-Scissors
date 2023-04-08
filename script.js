@@ -16,9 +16,9 @@ const scissors_button = document.createElement('button');
 
 
 //set text content for each button
-button1.textContent = "rock";
-button2.textContent = "paper";
-button3.textContent = "scissors";
+rock_button.textContent = "rock";
+paper_button.textContent = "paper";
+scissors_button.textContent = "scissors";
 
 function rock_click(e) {
     playerSelection = 'rock';
@@ -33,14 +33,14 @@ function scissors_click(e) {
 }
 
 // add event listener to each button
-button1.addEventListener('click', playRound('rock', computerSelection));  
-button2.addEventListener('click', playRound('paper', computerSelection));
-button3.addEventListener("click", playRound('scissors', computerSelection));
+rock_button.addEventListener('click', playRound('rock', computerSelection));  
+paper_button.addEventListener('click', playRound('paper', computerSelection));
+scissors_button.addEventListener("click", playRound('scissors', computerSelection));
 
 // append buttons to the container element
-buttonContainer.appendChild(button1);
-buttonContainer.appendChild(button2);
-buttonContainer.appendChild(button3);
+buttonContainer.appendChild(rock_button);
+buttonContainer.appendChild(paper_button);
+buttonContainer.appendChild(scissors_button);
 
 //playerSelection=playerSelection.toLowerCase();
 //console.log(game());
