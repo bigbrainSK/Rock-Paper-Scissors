@@ -1,5 +1,4 @@
 //let playerSelection = (prompt('Please enter rock, paper, or scissors'));
-let computerSelection= getComputerChoice();
 let computerScore=0;
 let playerScore=0;
 
@@ -27,19 +26,28 @@ buttonContainer.appendChild(scissors_button);
 // add event listener to each button
 rock_button.addEventListener('click', () => {
     const playerSelection = 'rock';
-    playRound(playerSelection, computerSelection);
+    const computerSelection= getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
       console.log('You chose rock!')
+      console.log('computer chooses ' + computerSelection);
+      console.log(result);
 }); 
 
 paper_button.addEventListener('click', () => {
     const playerSelection = 'paper';
-    playRound(playerSelection, computerSelection);
+    const computerSelection= getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
       console.log('You chose paper!!')
+      console.log('computer chooses ' + computerSelection);
+      console.log(result);
 });
 scissors_button.addEventListener('click', () => {
     const playerSelection = 'scissors';
-    playRound(playerSelection, computerSelection);
+    const computerSelection= getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
     console.log('You chose scissors!!!')
+    console.log('computer chooses ' + computerSelection);
+    console.log(result);
 }); 
 
 
