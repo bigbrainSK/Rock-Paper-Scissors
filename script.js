@@ -51,7 +51,6 @@ scissors_button.addEventListener('click', () => {
 }); 
 
 
-
 //console.log(game());
 function getComputerChoice() {
     const randomNumber=Math.floor(Math.random()*3);
@@ -64,35 +63,47 @@ function getComputerChoice() {
             return 'scissors';
     }
 }
+
+
+
 function playRound(playerSelection, computerSelection) {
+  let result; 
+
     switch(playerSelection) { 
         case 'rock': 
             if (computerSelection=='rock')
-              return "Draw!";
+              result = "Draw!";
             if(computerSelection=='paper')
-              return "You lose, paper beats rock!";
+              result = "You lose, paper beats rock!";
             if(computerSelection=='scissors')
-              return "You win, rock beats scissors!";
+              result = "You win, rock beats scissors!";
+            break;
         
         case 'paper':
             if (computerSelection=='rock')
-              return "You win, paper beats rock!";
+              result =  "You win, paper beats rock!";
             if(computerSelection=='paper')
-              return "Draw!";
+              result =  "Draw!";
             if(computerSelection=='scissors')
-              return "You lose, scissors beats paper!";
+              result = "You lose, scissors beats paper!";
+            break;
 
         case 'scissors':
             if (computerSelection=='rock')
-              return "You lose, rock beats scissors!";
+              result = "You lose, rock beats scissors!";
             if(computerSelection=='paper')
-              return "You win, scissors beats paper!";
+              result = "You win, scissors beats paper!";
             if(computerSelection=='scissors')
-              return "Draw!";
+              result = "Draw!";
+            break;
 
         default:
-            return 'you messed up buddy';
+            result = 'you messed up buddy';
     }
+    const resultContainer = document.querySelector('#results');
+    resultContainer.textContent = result;
+
+    return result;
 }
 
 
