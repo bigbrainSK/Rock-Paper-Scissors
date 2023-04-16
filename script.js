@@ -131,9 +131,16 @@ function game(playerSelection, computerSelection) {
     
   if (result.includes('You lose')) {
     computerScore++ ;
+    const p = document.createElement('p');
+    p.textContent = `computerScore: ${computerScore}`;
+    resultContainer.appendChild(p);
+  
   }
   else if (result.includes('You win')) {
     playerScore++ ;
+    const p = document.createElement('p');
+    p.textContent = `player: ${playerScore}`;
+    resultContainer.appendChild(p);  
   }
 
   if (computerScore === 5) {
