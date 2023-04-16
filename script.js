@@ -60,20 +60,6 @@ scissors_button.addEventListener('click', () => {
   game(playerSelection, computerSelection);
 }); 
 
-// function updateRounds(playerChoice) {
-//   const computerSelection = getComputerChoice();
-//   playerSelection = playerChoice;
-//   const result = playRound(playerSelection, computerSelection);
-//   const message = `You chose ${playerSelection}!! Computer Chose ${computerSelection}!  ${result}`;
-//   const p = document.createElement('p');
-//   p.textContent = message; 
-//   resultContainer.appendChild(p);
-//   rounds++;
-
-// }
-
-
-//console.log(game());
 function getComputerChoice() {
     const randomNumber=Math.floor(Math.random()*3);
     switch (randomNumber) {
@@ -85,8 +71,6 @@ function getComputerChoice() {
             return 'scissors';
     }
 }
-
-
 
 function playRound(playerSelection, computerSelection) {
   
